@@ -11,7 +11,7 @@
   console.log(b);
 }
 console.log(a);
-// console.log(b); dara erro pois está tentando acessar b fora do bloco
+//console.log(b); // não consigo acessar b fora do bloco de código
 
 // b que foi instanciada com let não pode ser acessada de fora do bloco, mas podemos acessar dentro do bloco
 
@@ -19,7 +19,7 @@ console.log(a);
 const produto = "iPad";
 console.log(`${produto} é caro!`);
 
-// Destructuring
+// Destructuring = tirar de dentro de uma estrutura algo
 const [l, e, ...tras] = "Cod3r";
 console.log(l, e, tras);
 

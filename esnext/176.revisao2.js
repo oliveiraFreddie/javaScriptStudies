@@ -1,4 +1,6 @@
 // Arrow Function
+// Arrow function é um função anonima, logo vamos sempre atribuir essa função a uma variável
+// se ela não tem corpo {}, o return é implicito mas se ela tem corpo temos que explicitamente colocar o return
 const soma = (a, b) => a + b;
 console.log(soma(2, 3));
 

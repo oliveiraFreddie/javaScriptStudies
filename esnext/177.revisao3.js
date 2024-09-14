@@ -1,7 +1,7 @@
 // ES8: Object.values/Object.entries
 const obj = { a: 1, b: 2, c: 3 };
-console.log(Object.values(obj));
-console.log(Object.entries(obj));
+console.log(Object.values(obj)); // retorna um array apenas com os valores
+console.log(Object.entries(obj)); // retorna um array de arrays
 
 // Melhorias na Notação Literal
 const nome = "Carla";
@@ -15,7 +15,7 @@ const pessoa = {
 console.log(pessoa.nome, pessoa.ola());
 
 // Class (em JS a classe iternamente é covertida para uma função)
-class Animal {}
+class Animal { }
 class Cachorro extends Animal {
   falar() {
     return "Au au!";

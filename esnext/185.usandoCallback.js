@@ -1,5 +1,8 @@
+// Nesse exemplo fazemos uma requisição http para buscar os dados em um endereço e usamos callbacks para concatenar o resultado das chamadas
 // sem promise...
 const http = require("http");
+
+// além do require que é um módulo do node para fazer requisição http temos também o axios que é baseado em promise
 
 const getTurma = (letra, callback) => {
   const url = `http://files.cod3r.com.br/curso-js/turma${letra}.json`;
@@ -11,12 +14,17 @@ const getTurma = (letra, callback) => {
     });
 
     res.on("end", () => {
-      callback(JSON.parse(resultado));
+      callback(JSON.parse(resultado)); // lembrando o parse converte um string json para um objeto
     });
   });
 };
 
 let nomes = [];
+
+// getTurma("A", alunos => {
+//   console.log(alunos)
+// })
+
 getTurma("A", (alunos) => {
   nomes = nomes.concat(alunos.map((a) => `A: ${a.nome}`));
   getTurma("B", (alunos) => {
@@ -27,5 +35,6 @@ getTurma("A", (alunos) => {
     });
   });
 });
+
 // essa estrutura não é interessante fica dificil de ler o código, é chamado callback hell,
 // quando temos muitas callbacks aninhadas.

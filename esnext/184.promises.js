@@ -1,3 +1,7 @@
+// como o próprio nome diz é uma promessa, é usado quando vamos ter algum tipo de processamento assíncrono
+// ela tem dois resultados possíveis, a promessa ser cumprida ou a promessa não ser
+// por isso ela é um um contrutor que recebe 2 parametros, resolve e reject
+
 function falarDepoisDe(segundos, frase) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {

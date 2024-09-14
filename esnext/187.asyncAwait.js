@@ -1,7 +1,9 @@
-// com promise...
+// O Objetivo do Async Await é simplificar o uso de promise
+// Deixa um código assincrono com cara de sincrono
+
 const http = require("http");
 
-const getTurma = (letra) => {
+const getTurma = (letra) => { // função getTurma retorna uma promise
   const url = `http://files.cod3r.com.br/curso-js/turma${letra}.json`;
   return new Promise((resolve, reject) => {
     http.get(url, (res) => {

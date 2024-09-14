@@ -1,3 +1,4 @@
+// Nova estrutura parecida com o Array mas ela
 // não aceita repetição/não indexada
 const times = new Set();
 times.add("Vasco");
